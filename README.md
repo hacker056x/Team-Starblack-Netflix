@@ -105,6 +105,15 @@ Los nuevos usuarios pueden registrarse en /register.
 <img width="661" height="604" alt="image" src="https://github.com/user-attachments/assets/6628c5ca-e560-4b86-a53a-74fd8ddec2a0" />
 
 
+como funciona 
+
+debe carga la cookies y dar generar
+
+<img width="1074" height="606" alt="image" src="https://github.com/user-attachments/assets/2fd1f466-8ce6-4a66-a324-658ed378f8d7" />
+<img width="1085" height="610" alt="image" src="https://github.com/user-attachments/assets/f249bdb8-2d0e-4dbd-a87b-c182bd974892" />
 
 
+el link lo pega en un navegador y con esa puede ver netflix en la pc y e puede activar la tv por medio de codigo, espero que sea de gran ultilidad.
 
+
+by @hacker056
