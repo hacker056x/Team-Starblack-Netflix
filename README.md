@@ -100,3 +100,11 @@ admin:admin123
 demo:demo123
 
 Los nuevos usuarios pueden registrarse en /register.
+
+
+<img width="661" height="604" alt="image" src="https://github.com/user-attachments/assets/6628c5ca-e560-4b86-a53a-74fd8ddec2a0" />
+
+
+
+
+
