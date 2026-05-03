@@ -87,7 +87,7 @@ def register_user(username: str, password: str, email: str = "") -> Tuple[bool, 
         
         # Verificar si ya existe
         if user_exists(username):
-            return False, "Username already exists"
+            return False, "El nombre de usuario ya existe"
         
         # Registrar usuario
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
@@ -97,7 +97,7 @@ def register_user(username: str, password: str, email: str = "") -> Tuple[bool, 
         with open(USERS_FILE, 'a') as f:
             f.write(f"{username}:{hashed_password}:{email_field}:{created_at}\n")
         
-        return True, "User registered successfully"
+        return True, "Usuario registrado exitosamente"
         
     except Exception as e:
         return False, f"Registration error: {str(e)}"
@@ -256,7 +256,7 @@ def login():
         password = request.form.get('password', '').strip()
         
         if not username or not password:
-            return render_template('login.html', error='Please enter username and password')
+            return render_template('login.html', error='Por favor, introduzca su nombre de usuario y contraseña')
         
         if verify_user(username, password):
             session['logged_in'] = True
@@ -264,7 +264,7 @@ def login():
             session['login_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             return redirect(url_for('index'))
         else:
-            return render_template('login.html', error='Invalid username or password')
+            return render_template('login.html', error='Nombre de usuario o contraseña incorrectos')
     
     return render_template('login.html')
 
@@ -279,10 +279,10 @@ def register():
         
         # Validaciones
         if not username or not password:
-            return render_template('register.html', error='Please fill all required fields')
+            return render_template('register.html', error='Por favor, rellene todos los campos obligatorios')
         
         if password != confirm_password:
-            return render_template('register.html', error='Passwords do not match')
+            return render_template('register.html', error='Las contraseñas no coinciden')
         
         # Registrar usuario
         success, message = register_user(username, password, email)
@@ -312,12 +312,12 @@ def process():
             content = request.form.get('cookies_text', '')
             
         if not content:
-            return jsonify({'error': 'No cookies provided'}), 400
+            return jsonify({'error': 'No se proporcionan cookies'}), 400
             
         cookies_list = checker.extract_cookies_from_text(content)
         
         if not cookies_list:
-            return jsonify({'error': 'No valid Netflix cookies found in the provided text/file'}), 400
+            return jsonify({'error': 'No se encontraron cookies válidas de Netflix en el sitio proporcionadotext/file'}), 400
             
         results = []
         session_id = str(uuid.uuid4())[:8]
@@ -362,7 +362,7 @@ def export():
         results = data.get('results', [])
         
         if not results:
-            return jsonify({'error': 'No results to export'}), 400
+            return jsonify({'error': 'No hay resultados para guardar'}), 400
             
         content = "NETFLIX TOKENS GENERATED\n"
         content += "=" * 60 + "\n"
