@@ -1,0 +1,224 @@
+/* Estilos para la página de registro - Estilo aerosol */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/7ea4545e-42d3-4ebf-82fd-0e1984dc6375/web/DO-es-20260316-TRIFECTA-perspective_5f63a8b1-be18-4c03-9cbe-fc57f9a2d3d5_small.jpg') center/cover fixed no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+.register-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.register-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-header {
+    background: linear-gradient(135deg, rgba(229, 9, 20, 0.9) 0%, rgba(176, 7, 16, 0.9) 100%);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.register-header i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.register-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.register-header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.register-body {
+    padding: 35px 30px;
+}
+
+.input-group-text {
+    background: rgba(229, 9, 20, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #E50914;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #E50914;
+    box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+}
+
+.btn-register {
+    width: 100%;
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+    backdrop-filter: blur(4px);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-login-redirect {
+    background: linear-gradient(135deg, #E50914 0%, #b00710 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-login-redirect:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
+    color: white;
+}
+
+.alert {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.register-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.register-footer hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #E50914, transparent);
+}
+
+.login-link {
+    color: #E50914;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .register-container {
+        padding: 15px;
+    }
+    
+    .register-header {
+        padding: 30px 20px;
+    }
+    
+    .register-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .register-body {
+        padding: 25px 20px;
+    }
+    
+    .btn-register {
+        padding: 10px;
+    }
+}
